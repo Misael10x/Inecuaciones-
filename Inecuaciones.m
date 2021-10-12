@@ -7,35 +7,38 @@
 %Usage                  :C:\Users\MASTER\Pictures\Octave Proyecto
 "inecuaciones de Primer grado"
  
- 
+ pkg load symbolic 
  syms x
-solve (5+x=9)
+ disp ('inecuaciones de primer grado');
+disp ('5+x=9');
 solve (x=9-5)
-solve (x=4)
+
+syms x
+e= x=9-5
+subplot (3,3,1)
+ezplot (e)
  
  "Inecuaciones Segundo grado"
-solve (2x^2=50)
+ pkg load symbolic 
+ syms x
+ disp ('inecuaciones de segundo grado');
+disp ('2x^2=50');
 solve (x^2=3x)
-solve (5x^2-2x+1=0)
-solve (7x-x^2=0)
-solve (3x*x-5*=6x)
+
+syms x
+e= x^2=3x
+subplot (3,3,2)
+ezplot (e)
+
  
  "Inecuaciones de valor absoluto"
+pkg load symbolic 
+ syms x
+ disp ('inecuaciones con valor absoluto');
+disp ('abs |3x-2|<1');
+solve (abs -3<3x<1)
 
-abs (|3x-2|<1)
-abs (-1<3x-2<1)
-abs (-1-2<3x<1-2)
-abs (-3<3x<1)
-abs (-1<x<0.5)
-
-x=-4:1:4;
-y=x'*sin(x);
-plot (x,y)
-
-x=3:0.1:6;
-y=sqrt(2x^2=50);
-plot (x,y)
-
-x=-1:0:0.5;
-y=sqrt(|3x-2|<1);
-plot (x,y)
+syms x
+e= -3<3x<1
+subplot (3,3,3)
+ezplot (e)
